@@ -10,16 +10,16 @@
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
 
-# alias MyPhoenixApp.Accounts
-# alias MyPhoenixApp.Accounts.User
-# alias MyPhoenixApp.Repo
+alias MyPhoenixApp.Accounts
+alias MyPhoenixApp.Accounts.User
+alias MyPhoenixApp.Repo
 
-# conrad =
-#   %User{}
-#   |> User.registration_changeset(%{
-#     email: "conrad@example.com"
-#   })
-#   |> Repo.insert!()
+conrad =
+  %User{}
+  |> User.registration_changeset(%{
+    email: "conrad@example.com"
+  })
+  |> Repo.insert!()
 
-# {:ok, _} =
-#   Accounts.update_user_password(conrad, %{password: "supersecrets"})
+{:ok, _} =
+  Accounts.update_user_password(conrad, %{password: "supersecrets"})
